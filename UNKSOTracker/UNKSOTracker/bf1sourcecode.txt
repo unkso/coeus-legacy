@@ -1,0 +1,2446 @@
+
+<!DOCTYPE html>
+<html>
+<head><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"5dfabc9f6c","applicationID":"100948194","transactionName":"ZlBSMhcEWRdWUxFQC18afTAmSnUiBnMKVxBDWlwKABcYNEVfA1AIVA==","queueTime":0,"applicationTime":2010,"agent":"","atts":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>
+        
+    RT_Cheesemon-US- - Profile Overview - Battlefield 1 Tracker
+
+    </title>
+<link rel="stylesheet" href="/content/bf/bf1-static.css?v=636570732817980998" />
+<meta name="description" content="View RT_Cheesemon-US-'s Battlefield 1 career stats, progress and leaderboard rankings.">
+<meta property="twitter:card" content="summary" />
+<meta property="twitter:site" content="trackernetwork" />
+<meta property="og:url" content="http://battlefieldtracker.com/bf1/profile/pc/RT_Cheesemon-US-" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="RT_Cheesemon-US-'s Battlefield 1 Profile" />
+<meta name="google-play-app" content="app-id=com.battlefieldtracker.app">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+<meta name="google-site-verification" content="u82XrpKLhI58tMjpepV4h84WSGVs8mJQ_WWyd_4o_s8" />
+<link rel="shortcut icon" href="/Images/BF/FavIcon/favicon.ico">
+<link rel="icon" sizes="16x16 32x32 64x64" href="/Images/FavIcon/favicon.ico">
+<link rel="icon" type="image/png" sizes="196x196" href="/Images/BF/FavIcon/favicon-196.png">
+<link rel="icon" type="image/png" sizes="160x160" href="/Images/BF/FavIcon/favicon-160.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/Images/BF/FavIcon/favicon-96.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/Images/BF/FavIcon/favicon-64.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/Images/BF/FavIcon/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/Images/BF/FavIcon/favicon-16.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/Images/BF/FavIcon/favicon-152.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/Images/BF/FavIcon/favicon-144.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/Images/BF/FavIcon/favicon-120.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/Images/BF/FavIcon/favicon-114.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/Images/BF/FavIcon/favicon-76.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/Images/BF/FavIcon/favicon-72.png">
+<link rel="apple-touch-icon" href="/Images/FavIcon/BF/favicon-57.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="msapplication-TileColor" content="#080808">
+<meta name="msapplication-TileImage" content="/Images/BF/FavIcon/favicon-144.png">
+<meta name="msapplication-config" content="/Images/BF/FavIcon/browserconfig.xml">
+<meta name="msapplication-navbutton-color" content="#080808">
+<meta name="theme-color" content="#080808">
+<script src="//tags-cdn.deployads.com/a/battlefieldtracker.com.js" async></script>
+<link href="/Content/bundled.css?cache=636570732817980998" rel="stylesheet" />
+<link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" />
+<style type="text/css">
+    
+
+        .ad-responsive: { text-align: center; }
+        .ad-responsive > div {
+            width: 728px;
+            height: 90px;
+            margin: auto;
+        }
+        @media(max-width:1000px) {
+                .ad-responsive > div {
+                    display:none;
+            }
+        }
+    </style>
+</head>
+<body>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/Scripts/jquery.js"><\/script>')</script>
+<script>
+        window.device = 'mobile';
+        window.username = 'False';
+
+        if (window.matchMedia !== undefined && window.matchMedia("(min-width: 1000px)").matches) {
+            window.device = 'desktop';
+        }
+
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-42280104-12', 'auto');
+        ga('send', 'pageview');
+
+        ga('create', 'UA-42280104-4', 'auto', { 'name': 'agg' });
+        ga('agg.send', 'pageview');
+    </script>
+<header class="trn-header at-top" id="trn-header" data-controller="BF1" data-action="Profile">
+<div class="top-bar">
+<div class="branding">
+<div class="logo">
+<a href="/">
+<img src="/Images/General/logo.png" alt="TRN Logo" />
+</a>
+</div>
+<div class="title">
+<a class="site-name" href="/">Battlefield</a>
+<span class="trn-name">Tracker Network</span>
+</div>
+</div>
+<div class="search" id="trn-search">
+<div class="search-box">
+<div class="search-icon">
+<i class="ion ion-android-search"></i>
+</div>
+<input class="search-field" type="text" placeholder="Search" id="trn-searchfield" />
+<div class="search-platforms">
+<i class="search-platform ion ion-social-windows" data-platform="3" data-color="#00AEF0"></i>
+<i class="search-platform ion ion-playstation" data-platform="2" data-color="#003791"></i>
+<i class="search-platform ion ion-xbox active" data-platform="1" data-color="#107c10"></i>
+</div>
+</div>
+<div class="suggestion-list">
+<span class="suggestion-label">Recent Players</span>
+<ul id="suggestion-list"></ul>
+</div>
+</div>
+<div class="tools">
+<div class="tools-menu network-menu has-submenu">
+<a href="#" onclick="return false;" class="submenu-btn">
+<i class="ion ion-grid"></i>
+</a>
+<div class="submenu">
+<div class="sites">
+<a href="http://destinytracker.com/" class="site">
+<img class="site-logo" src="https://cdn.thetrackernetwork.com/cdn/trackernetwork/destiny.png" />
+<span class="site-name">Destiny <br />Tracker</span>
+</a>
+<a href="http://overwatchtracker.com/" class="site">
+<img class="site-logo" src="https://cdn.thetrackernetwork.com/cdn/trackernetwork/overwatch.png" />
+<span class="site-name">Overwatch <br />Tracker</span>
+</a>
+<a href="http://halotracker.com/" class="site">
+<img class="site-logo" src="https://cdn.thetrackernetwork.com/cdn/trackernetwork/halo-5.png" />
+<span class="site-name">Halo <br />Tracker</span>
+</a>
+<a href="http://rocketleague.tracker.network/" class="site">
+<img class="site-logo" src="https://cdn.thetrackernetwork.com/cdn/trackernetwork/rocket-league.png" />
+<span class="site-name">Rocket League <br />Tracker</span>
+</a>
+<a href="http://divisiontracker.com/" class="site">
+<img class="site-logo" src="https://cdn.thetrackernetwork.com/cdn/trackernetwork/the-division.png" />
+<span class="site-name">The Division <br />Tracker</span>
+</a>
+<a href="http://csgo.tracker.network/" class="site">
+<img class="site-logo" src="https://cdn.thetrackernetwork.com/cdn/trackernetwork/csgo.png" />
+<span class="site-name">CS:GO <br />Tracker</span>
+</a>
+<a href="http://fhtracker.com/" class="site">
+<img class="site-logo" src="https://cdn.thetrackernetwork.com/cdn/trackernetwork/for-honor.jpg" />
+<span class="site-name">For Honor <br />Tracker</span>
+</a>
+<a href="http://pubgtracker.com/" class="site">
+<img class="site-logo" src="https://cdn.thetrackernetwork.com/cdn/trackernetwork/pubg.jpg" />
+<span class="site-name">PUBG <br />Tracker</span>
+</a>
+<a href="http://anthemtracker.com/" class="site">
+<img class="site-logo" src="https://cdn.thetrackernetwork.com/cdn/trackernetwork/icon-100.jpg" />
+<span class="site-name">Anthem <br />Tracker</span>
+</a>
+<a href="http://r6.tracker.network/" class="site">
+<img class="site-logo" src="https://cdn.thetrackernetwork.com/cdn/trackernetwork/DB22rainbow6.jpg" />
+<span class="site-name">Rainbow 6 Siege <br />Tracker</span>
+</a>
+<a href="http://fortnitetracker.com/" class="site">
+<img class="site-logo" src="https://cdn.thetrackernetwork.com/cdn/trackernetwork/3F0Cfortnite.jpg" />
+<span class="site-name">Fortnite <br />Tracker</span>
+ </a>
+</div>
+<a href="https://tracker.network" class="more-link">More</a>
+</div>
+</div>
+<div class="tools-menu">
+<a href="https://thetrackernetwork.com/auth/login?domain=battlefieldtracker.com&amp;secure=false&amp;returnUrl=/bf1/profile/pc/RT_Cheesemon-US-">
+<i class="ion ion-person"></i>
+<span class="text">Login / Register</span>
+</a>
+</div>
+</div>
+</div>
+<nav class="navigation-bar">
+<ul class="main-menu">
+<li class="">
+<a href="/">Home</a>
+</li>
+<li class="">
+<a href="/lfg">LFG</a>
+</li>
+<li class="has-submenu ">
+<a href="#" onclick="return false;" class="submenu-btn">Leaderboards <i class="ion ion-android-arrow-dropdown"></i></a>
+<div class="submenu-container" id="lb">
+<ul class="submenu">
+<li>
+<a href="/bf1/leaderboards/all/SiteScore">Leaderboards</a>
+</li>
+<li>
+<a href="/bf1/leaderboards/all/Kills/weapon/rifle">Weapon Leaderboards</a>
+</li>
+<li>
+<a href="/bf1/leaderboards/all/Kills/vehicle/attack-plane">Vehicle Leaderboards</a>
+</li>
+<li>
+<a href="/bf1/leaderboards/all/Score/kit/assault">Kit Leaderboards</a>
+</li>
+<li>
+<a href="/bf1/leaderboards/all/Score/gamemode/conquest">Game Mode Leaderboards</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="">
+<a href="/bf1/insights">Insights</a>
+</li>
+<li class="">
+<a href="/bf1/db">Weapons</a>
+</li>
+<li class="">
+<a href="/teams">Teams</a>
+</li>
+<li class="">
+<a href="/bf1/servers">Servers</a>
+</li>
+<li class="has-submenu ">
+<a href="#" onclick="return false;" class="submenu-btn">Support <i class="ion ion-android-arrow-dropdown"></i></a>
+<div class="submenu-container">
+<ul class="submenu">
+<li>
+<a href="/contact">Contact</a>
+</li>
+<li>
+<a href="/Forums/Post/2636/25/battlefield-1-stat-requests">Stat Requests</a>
+</li>
+<li>
+<a href="/site-api">API</a>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</nav>
+</header>
+<script src="/Scripts/TRN-Header.js"></script>
+<div class="container content-container">
+<div style="min-height: 730px;">
+<div class="ad-box" style="margin-bottom: 20px;">
+<div class="upsell">
+<div>
+<a href="/supporter">Support</a> the site!
+</div>
+<div>
+<a href="/supporter" class="btn btn-learnmore btn-sm">Learn More</a>
+<a href="/supporter" class="btn btn-primary btn-sm">Donate</a>
+</div>
+</div>
+<div class="ad">
+<div style="width:100%;margin-bottom:15px;">
+<script src="//tags-cdn.deployads.com/a/battlefieldtracker.com.js" async></script>
+<script>
+        if (window.device == 'mobile') {
+            document.write('<div class="ad-tag" data-ad-name="Header Mobile: 320x50" data-ad-size="320x50" data-ad-report="bottom right"></div>');
+        }
+        else {
+            document.write('<div class="ad-tag" data-ad-name="Header Desktop: 728x90" data-ad-size="728x90" data-ad-refresh="time 240s" data-ad-report="bottom right" data-ad-targeting="platform=other"></div>');
+
+        }
+        (deployads = window.deployads || []).push({});
+    </script>
+<div id="top-supportsite" style="width: 100%; background-color: rgba(0, 0, 0, .7); border: 1px solid rgb(241, 127, 26); text-align: center;height: 100%;display:none;">
+<i class="fa fa-smile-o fa-1x hidden-xs hidden-sm" style="margin-top: 6px; color:#fdb715;"></i>
+<div style="margin: 0px auto; width: 80%; color:#888; margin-top: 10px; margin-bottom:10px; font-size: 10pt; line-height: 1.5em;">
+Please consider adding Battlefield Tracker to your adblock whitelist! Our ads support the development and hardware costs of running this site. Really hate ads? Become a <a href="/supporter">premium user.</a>
+</div>
+</div><div style="clear: both;"></div>
+</div>
+</div>
+</div>
+<div id="side-ad-parent" class="side-ad">
+<script type="text/javascript">
+            if (window.location.pathname != '/live') {
+                if (window.matchMedia !== undefined && window.matchMedia("(min-width: 1900px)").matches) {
+
+                    window.addEventListener('resize', function () {
+                        document.getElementById('side-ad-parent').style.left = ((window.innerWidth / 2) + 600) + "px";
+                    }, true);
+
+
+                    document.getElementById('side-ad-parent').style.left = ((window.innerWidth / 2) + 600) + "px";
+
+                    //document.write('<div class="ad-tag" data-ad-name="SideBar 300x600" data-ad-size="300x600" ></div>');
+
+                    document.write('<div class="ad-tag" data-ad-name="RL-300x600ATFrefreshSPLIT-A" data-ad-size="300x600" data-ad-refresh="time 90s" data-ad-sticky="sidebar 60px"></div>');
+
+                } else if (window.matchMedia !== undefined && window.matchMedia("(min-width: 1600px)").matches) {
+
+                    window.addEventListener('resize', function () {
+                        document.getElementById('side-ad-parent').style.left = ((window.innerWidth / 2) + 600) + "px";
+                    }, true);
+
+                    document.getElementById('side-ad-parent').style.left = ((window.innerWidth / 2) + 600) + "px";
+
+                    document.write('<div class="ad-tag" data-ad-name="RL-SideBar 160x600" data-ad-size="160x600" data-ad-refresh="time 90s" data-ad-sticky="sidebar 60px"></div>');
+                }
+            }
+
+
+        </script>
+<script src="//tags-cdn.deployads.com/a/battlefieldtracker.com.js" async></script>
+<script>(deployads = window.deployads || []).push({});</script>
+</div>
+<script src="/Scripts/highcharts.js"></script>
+<script src="/Scripts/highcharts.dark.js"></script>
+<div class="bf1-profile">
+<header class="card profile-header">
+<div class="top-bit">
+<div class="info">
+<h1 class="name"><i class="ion ion-social-windows" title="PC"></i>
+RT_Cheesemon-US-
+<small>/ Battlefield 1 Stats</small></h1>
+<span class="last-updated"></span>
+</div>
+<div class="actions">
+<span id="compare-box" data-platform="3" data-name="RT_Cheesemon-US-"></span>
+<a href="/bf1/search?platform=pc&amp;name=RT_Cheesemon-US-&amp;forced=True" class="btn btn-sm btn-outline" rel="nofollow">Update Stats</a>
+</div>
+</div>
+<nav class="navigation" id="info-header-nav-container">
+<ul id="info-header-nav-list">
+<li class="active"><a href="/bf1/profile/pc/RT_Cheesemon-US-">Overview</a></li>
+<li class=""><a href="/bf1/profile/pc/RT_Cheesemon-US-/live"><i class="ion-record" style="color:red;"></i> Live Tracking</a></li>
+<li class=""><a href="/bf1/profile/pc/RT_Cheesemon-US-/matches" rel="nofollow">Game Reports</a></li>
+<li class=""><a href="/bf1/profile/pc/RT_Cheesemon-US-/weapons">Weapons</a></li>
+<li class=""><a href="/bf1/profile/pc/RT_Cheesemon-US-/vehicles">Vehicles</a></li>
+<li class=""><a href="/bf1/profile/pc/RT_Cheesemon-US-/tracking">Tracking</a></li>
+<li class=""><a href="/bf1/profile/pc/RT_Cheesemon-US-/medals">Medals</a></li>
+<li class=""><a href="/bf1/profile/pc/RT_Cheesemon-US-/dogtags">Dogtags</a></li>
+<li><a href="/bf4/search/RT_Cheesemon-US-" rel="nofollow">BF4</a></li>
+</ul>
+<div id="info-header-nav-chevron" style="display: none"><i class="ion ion-android-menu"></i></div>
+</nav>
+</header>
+<script src="/Scripts/info-header.js"></script>
+<script type="text/javascript" src="/Scripts/pages/overview.js"></script>
+<script type="text/javascript">
+    $(function () {
+        addPlayer('3', 'RT_Cheesemon-US-');
+    });
+
+</script>
+<div class="card player-general">
+<div class="current-rank">
+<img src="/Images/bf1/ranks/12.png" />
+<div class="details">
+<span class="title">Rank 12</span>
+</div>
+</div>
+<div class="data">
+<div class="stats">
+<div class="stat">
+<div class="name">Score/min</div>
+<div class="value">
+<a href="javascript:;" onclick="trnToolTips.showHelp('SPM Update', 'On March 29th, 2017 we implemented a fix for SPM.  The companion app as well as the in-game app was calculating SPM by using the score from the vanilla maps that BF1 came with.  New map scores were not being included.<br /><br />The in-game SPM still is not fixed, but should be in early April.');"><i class="ion-help-circled"></i></a>
+2,091
+</div>
+<div class="rank">
+<span class="text text-success">Top 2%</span>
+</div>
+</div>
+<div class="stat">
+<div class="name">Kill Ratio</div>
+<div class="value">0.79</div>
+<div class="rank">
+Top 84%
+</div>
+</div>
+<div class="stat">
+<div class="name">Win Percent</div>
+<div class="value">50.00%</div>
+<div class="rank">
+Top 54%
+</div>
+</div>
+<div class="stat">
+<div class="name">Game Score</div>
+<div class="value">211,533</div>
+<div class="rank">
+Top 93%
+</div>
+</div>
+<div class="stat">
+<div class="name">Time Played</div>
+<div class="value">1h 41m 11s</div>
+<div class="rank">
+Top 99%
+</div>
+</div>
+</div>
+<div class="rank-progress">
+<div class="progressbar">
+<div class="fill" style="width: 21.776666666666666666666666670%"></div>
+</div>
+<div class="values">
+<span>Current: 6,533</span>
+<span class="hidden-xs">21.78% &bull; Estimated 11 Min</span>
+<span>Needed: 23,467</span>
+</div>
+</div>
+</div>
+</div>
+<div class="profile-main">
+<div class="content">
+<div class="card-heading">
+<h2 class="card-title">Performance</h2>
+<div class="btn-group">
+<a href="javascript:;" onclick="ga('send', 'event', 'Graphics', 'default'); $('#graphics-1').attr('src', $('#graphics-1').attr('nosrc')); $('#graphics-modal').modal('show');" rel="nofollow" class="btn btn-xs btn-primary">Graphics</a>
+</div>
+</div>
+<div class="card">
+<div class="stats-large">
+<div class="stat">
+<div class="name">
+<a href="javascript:;" onclick="trnToolTips.showHelpTemplate('sitescore');"><i class="ion-help-circled"></i></a>
+BTR Score <a href="/bf1/leaderboards/pc/SiteScore" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="SiteScore">
+197
+</div>
+<div class="rank">
+<span></span>
+- Top 97% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(97% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+BTR/min <a href="/bf1/leaderboards/pc/SiteScorePM" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="SiteScorePM">
+1.95
+</div>
+<div class="rank">
+<span></span>
+- Top 21% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(21% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Score/Min <a href="/bf1/leaderboards/pc/Spm" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="Spm">
+2,090.59
+</div>
+<div class="rank">
+<span></span>
+- <span class="text text-success">Top 2%</span> <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(2% - 2px)"></div>
+</div>
+ </div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Game Score <a href="/bf1/leaderboards/pc/Score" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="Score">
+211,533
+</div>
+<div class="rank">
+<span></span>
+- Top 93% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(93% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+K/D Ratio <a href="/bf1/leaderboards/pc/Kd" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="Kd">
+0.79
+</div>
+<div class="rank">
+<span></span>
+- Top 84% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(84% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Win Percent <a href="/bf1/leaderboards/pc/Wl" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="Wl">
+50%
+</div>
+<div class="rank">
+<span></span>
+- Top 54% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(54% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Kills/game <a href="/bf1/leaderboards/pc/Kg" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="Kg">
+9.60
+</div>
+<div class="rank">
+<span></span>
+- Top 78% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+ <div style="right: calc(78% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Kills/Min <a href="/bf1/leaderboards/pc/Kpm" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="Kpm">
+2.02
+</div>
+<div class="rank">
+<span></span>
+- <span class="text text-success">Top 2%</span> <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(2% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Time Played <a href="/bf1/leaderboards/pc/TimePlayed" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="TimePlayed">
+1h 41m 11s
+</div>
+<div class="rank">
+<span></span>
+- Top 99% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(99% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Best Class
+</div>
+<div class="value">
+Medic
+</div>
+</div>
+</div>
+</div>
+<div class="card-heading">
+<h2 class="card-title">Trending</h2>
+<div class="btn-group">
+<a href="javascript:void(0)" onclick="score();ga('send', 'event', 'Performance Tracking', 'score');" class="btn btn-xs btn-primary">Game Score</a>
+<a href="javascript:void(0)" onclick="kd(); ga('send', 'event', 'Performance Tracking', 'kd');" class="btn btn-xs btn-primary">K/d</a>
+<a href="javascript:void(0)" onclick="win(); ga('send', 'event', 'Performance Tracking', 'win');" class="btn btn-xs btn-primary">Win %</a>
+<a href="javascript:void(0)" onclick="ss(); ga('send', 'event', 'Performance Tracking', 'ss');" class="btn btn-xs btn-primary">BTR Score</a>
+</div>
+</div>
+<div class="card">
+<div id="chartkd" style="width:100%;height:250px;"></div>
+<script type="text/javascript">
+    function updateSettings(graph) {   
+        if (window.localStorage != null) {
+            window.localStorage.setItem('overviewgraph', graph);
+        }
+    }
+
+    $(function () {
+        if (window.localStorage != null) {
+            if (window.localStorage.getItem('overviewgraph')) {
+                if (window.localStorage.getItem('overviewgraph') == 'win') {
+                    win();
+                    return;
+                } else if (window.localStorage.getItem('overviewgraph') == 'kd') {
+                    kd();
+                    return;
+                } else if (window.localStorage.getItem('overviewgraph') == 'ss') {
+                    ss();
+                    return;
+                } else if (window.localStorage.getItem('overviewgraph') == 'score') {
+                    score();
+                    return;
+                }
+
+            }
+        }
+        score();
+    });
+    function ss() {
+        updateSettings('ss');
+
+        var chart = $('#chartkd');
+
+        chart.html('<span class="fa fa-spin fa-cog fa-4x"></span>');
+        $.ajax({
+            url: '/bf1/partials/_chartoverview',
+            data: { playerId: '1484565', column: 'ss' },
+            type: 'GET'
+        })
+        .done(function (data) {
+            if (data.categories.length == 0) {
+                $('#chartkd')
+                    .html('Player has not played in the last month')
+                    .attr('style', 'height: 20px;');
+
+                return;
+            }
+            var chart;
+            var chartingOptions = {
+                rangeSelector: {
+                    enabled: false
+                },
+                chart: {
+                    borderRadius: 0,
+                    backgroundColor: 'rgba(0, 0, 0, 0)',
+                    type: 'line'
+                },
+                title: {
+                    text: 'BTR Score by Day',
+                    style: {
+                        color: '#80D9FF'
+                    }
+                },
+                xAxis: {
+                    categories: data.categories,
+                    labels: {
+                        formatter: function () {
+                            if (this.isFirst && this.value == 'Jan 01') {
+                                return 'Prior Data';
+                            }
+
+                            return this.value;
+                        }
+                    }
+                },
+                yAxis: [{
+                    title: {
+                        text: 'Daily Up/Down',
+                        style: {
+                            color: Highcharts.getOptions().colors[1]
+                        }
+                    }
+                }, {
+                    title: {
+                        text: 'BTR Score',
+                        style: {
+                            color: Highcharts.getOptions().colors[0]
+                        }
+                    },
+                    opposite: true
+                }],
+                plotOptions: {
+                    line: {
+                        enableMouseTracking: true
+                    }
+                },
+                tooltip: {
+                    positioner: function (labelWidth, labelHeight, point) {
+                        var tooltipX, tooltipY;
+                        if (point.plotX + labelWidth > chart.plotWidth) {
+                            tooltipX = point.plotX + chart.plotLeft - labelWidth - 150;
+                        } else {
+                            tooltipX = point.plotX + chart.plotLeft - 150;
+                        }
+                        tooltipY = point.plotY + chart.plotTop - 20;
+                        return {
+                            x: tooltipX,
+                            y: tooltipY
+                        };
+                    }
+                },
+                series: [
+                    { name: 'Score Up/Down', type: 'column', data: data.ssbyday },
+                    { name: 'Overall Site Score', type: 'spline', data: data.ss, yAxis: 1 }
+                ]
+            };
+            chart = $('#chartkd').highcharts(chartingOptions).highcharts();
+        })
+        .error(function () {
+            $('#chartkd')
+                    .html('Error loading data. Please check again later.')
+                    .attr('style', 'height: 20px;');
+        });
+    }
+
+    function kd() {
+        updateSettings('kd');
+
+        var chart = $('#chartkd');
+
+        chart.html('<span class="fa fa-spin fa-cog fa-4x"></span>');
+        $.ajax({
+            url: '/bf1/partials/_chartoverview',
+            data: { playerId: '1484565', column: 'kd' },
+            type: 'GET'
+        })
+        .done(function (data) {
+            if (data.categories.length == 0) {
+                $('#chartkd')
+                    .html('Player has not played in the last month')
+                    .attr('style', 'height: 20px;');
+
+                return;
+            }
+
+            var chart;
+            var chartingOptions = {
+                rangeSelector: {
+                    enabled: false
+                },
+                chart: {
+                    borderRadius: 0,
+                    backgroundColor: 'rgba(0, 0, 0, 0)',
+                    type: 'line'
+                },
+                title: {
+                    text: 'K/d By Day',
+                    style: {
+                        color: '#80D9FF'
+                    }
+                },
+                xAxis: {
+                    categories: data.categories,
+                    labels: {
+                        formatter: function () {
+                            if (this.isFirst && this.value == 'Jan 01') {
+                                return 'Prior Data';
+                            }
+
+                            return this.value;
+                        }
+                    }
+                },
+                yAxis: [{
+                    title: {
+                        text: 'Daily Kd',
+                        style: {
+                            color: Highcharts.getOptions().colors[1]
+                        }
+                    }
+                }, {
+                    title: {
+                        text: 'Overall Kd',
+                        style: {
+                            color: Highcharts.getOptions().colors[0]
+                        }
+                    },
+                    opposite: true
+                }],
+                tooltip: {
+                    positioner: function (labelWidth, labelHeight, point) {
+                        var tooltipX, tooltipY;
+                        if (point.plotX + labelWidth > chart.plotWidth) {
+                            tooltipX = point.plotX + chart.plotLeft - labelWidth - 100;
+                        } else {
+                            tooltipX = point.plotX + chart.plotLeft - 100;
+                        }
+                        tooltipY = point.plotY + chart.plotTop - 20;
+                        return {
+                            x: tooltipX,
+                            y: tooltipY
+                        };
+                    }
+                },
+                plotOptions: {
+                    line: {
+                        enableMouseTracking: true
+                    }
+                },
+                series: [{ name: 'K/d Overall', data: data.kd }, { name: 'K/d Daily', data: data.kdbyday }]
+            };
+
+            chart = $('#chartkd').highcharts(chartingOptions).highcharts();
+        })
+        .error(function () {
+            $('#chartkd')
+                    .html('Error loading data. Please check again later.')
+                    .attr('style', 'height: 20px;');
+        });
+    }
+
+    function win() {
+        updateSettings('win');
+
+        var chart = $('#chartkd');
+        chart.html('<span class="fa fa-spin fa-cog fa-4x"></span>');
+        $.ajax({
+            url: '/bf1/partials/_chartoverview',
+            data: { playerId: '1484565', column: 'win' },
+            type: 'GET'
+        })
+        .done(function (data) {
+            if (data.categories.length == 0) {
+                $('#chartkd')
+                    .html('Player has not played in the last month')
+                    .attr('style', 'height: 20px;');
+
+                return;
+            }
+
+            var chart;
+            var chartingOptions = {
+
+                chart: {
+                    borderRadius: 0,
+                    backgroundColor: 'rgba(0, 0, 0, 0)',
+                    type: 'line',
+                    zoomType: 'xy'
+                },
+                title: {
+                    text: 'Win Pct By Day',
+                    style: {
+                        color: '#80D9FF'
+                    }
+                },
+                yAxis: [{
+                    title: {
+                        text: 'Daily Win %',
+                        style: {
+                            color: Highcharts.getOptions().colors[0]
+                        }
+                    }
+                }, {
+                    title: {
+                        text: 'Win %',
+                        style: {
+                            color: Highcharts.getOptions().colors[1]
+                        },
+                        min: 0,
+                        max: 100
+                    },
+                    opposite: true
+                }],
+                xAxis: {
+                    categories: data.categories,
+                    labels: {
+                        formatter: function () {
+                            if (this.isFirst && this.value == 'Jan 01') {
+                                return 'Prior Data';
+                            }
+
+                            return this.value;
+                        }
+                    }
+                },
+                tooltip: {
+                    positioner: function (labelWidth, labelHeight, point) {
+                        var tooltipX, tooltipY;
+                        if (point.plotX + labelWidth > chart.plotWidth) {
+                            tooltipX = point.plotX + chart.plotLeft - labelWidth - 100;
+                        } else {
+                            tooltipX = point.plotX + chart.plotLeft - 100;
+                        }
+                        tooltipY = point.plotY + chart.plotTop - 20;
+                        return {
+                            x: tooltipX,
+                            y: tooltipY
+                        };
+                    }
+                },
+                plotOptions: {
+                    line: {
+                        enableMouseTracking: true
+                    }
+                },
+                series: [
+                    { name: 'Daily Win%', type: 'spline', data: data.dailyWl },
+                    { name: 'Win %', type: 'spline', data: data.wl, yAxis: 1 }
+                ]
+            };
+            chart = $('#chartkd').highcharts(chartingOptions).highcharts();
+            chart.yAxis[1].setExtremes(0, 100);
+        })
+        .error(function () {
+            $('#chartkd')
+                    .html('Error loading data. Please check again later.')
+                    .attr('style', 'height: 20px;');
+        });
+    }
+
+    function score() {
+        updateSettings('score');
+
+        var chart = $('#chartkd');
+        chart.html('<span class="fa fa-spin fa-cog fa-4x"></span>');
+        $.ajax({
+            url: '/bf1/partials/_chartoverview',
+            data: { playerId: '1484565', column: 'score' },
+            type: 'GET'
+        })
+        .done(function (data) {
+            var chart;
+            var chartingOptions = {
+
+                chart: {
+                    borderRadius: 0,
+                    backgroundColor: 'rgba(0, 0, 0, 0)',
+                    type: 'line',
+                    zoomType: 'xy'
+                },
+                title: {
+                    text: 'Game Score by Day',
+                    style: {
+                        color: '#80D9FF'
+                    }
+                },
+                yAxis: [{
+                    title: {
+                        text: 'Score Gain',
+                        style: {
+                            color: Highcharts.getOptions().colors[0]
+                        }
+                    }
+                }, {
+                    title: {
+                        text: 'Score per Min',
+                        style: {
+                            color: Highcharts.getOptions().colors[1]
+                        }
+                    },
+                    opposite: true
+                }],
+                xAxis: {
+                    categories: data.categories,
+                    labels: {
+                        formatter: function () {
+                            if (this.isFirst && this.value == 'Jan 01') {
+                                return 'Prior Data';
+                            }
+
+                            return this.value;
+                        }
+                    }
+                },
+                tooltip: {
+                    positioner: function (labelWidth, labelHeight, point) {
+                        var tooltipX, tooltipY;
+                        if (point.plotX + labelWidth > chart.plotWidth) {
+                            tooltipX = point.plotX + chart.plotLeft - labelWidth - 100;
+                        } else {
+                            tooltipX = point.plotX + chart.plotLeft - 100;
+                        }
+                        tooltipY = point.plotY + chart.plotTop - 20;
+                        return {
+                            x: tooltipX,
+                            y: tooltipY
+                        };
+                    }
+                },
+                plotOptions: {
+                    line: {
+                        enableMouseTracking: true
+                    }
+                },
+                series: [
+                    { name: 'Game Score', type: 'column', data: data.sbyday },
+                    { name: 'Spm', type: 'spline', data: data.spm, yAxis: 1 }
+                ]
+            };
+            chart = $('#chartkd').highcharts(chartingOptions).highcharts();
+        })
+        .error(function () {
+            $('#chartkd')
+                    .html('Error loading data. Please check again later.')
+                    .attr('style', 'height: 20px;');
+        });
+    }
+</script>
+</div>
+<div class="card-heading">
+<h2 class="card-title">General</h2>
+</div>
+<div class="card">
+<div class="stats-large">
+<div class="stat">
+<div class="name">
+Kills <a href="/bf1/leaderboards/pc/Kills" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="Kills">
+96
+</div>
+<div class="rank">
+<span></span>
+- Top 97% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(97% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Assists As Kills <a href="/bf1/leaderboards/pc/AssistsAsKills" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="AssistsAsKills">
+7
+</div>
+<div class="rank">
+ <span></span>
+- Top 79% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(79% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Deaths <a href="/bf1/leaderboards/pc/Deaths" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="Deaths">
+121
+</div>
+<div class="rank">
+<span></span>
+- Top 98% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(98% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Losses <a href="/bf1/leaderboards/pc/Losses" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="Losses">
+5
+</div>
+<div class="rank">
+<span></span>
+- Top 98% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(98% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Wins <a href="/bf1/leaderboards/pc/Wins" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="Wins">
+5
+</div>
+<div class="rank">
+<span></span>
+- Top 97% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(97% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Skill <a href="/bf1/leaderboards/pc/Skill" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="Skill">
+ 213.92
+</div>
+<div class="rank">
+<span></span>
+- Top 73% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(73% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Accuracy <a href="/bf1/leaderboards/pc/AccuracyRatio" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="AccuracyRatio">
+0.19
+</div>
+<div class="rank">
+<span></span>
+- Top 38% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(38% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Kill Assists <a href="/bf1/leaderboards/pc/Assists" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="Assists">
+7
+</div>
+<div class="rank">
+<span></span>
+- Top 96% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(96% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="card-heading">
+<h2 class="card-title">Objective</h2>
+</div>
+<div class="card">
+<div class="stats-large">
+<div class="stat">
+<div class="name">
+Flags Captured <a href="/bf1/leaderboards/pc/FlagsCaptured" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="FlagsCaptured">
+12
+</div>
+<div class="rank">
+<span></span>
+- Top 96% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(96% - 2px)"></div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="stat">
+<div class="name">
+Flags Defended <a href="/bf1/leaderboards/pc/FlagsDefended" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="FlagsDefended">
+11
+</div>
+<div class="rank">
+<span></span>
+- Top 97% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(97% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Artillery Defense Kills <a href="/bf1/leaderboards/pc/ArtilleryDefenseKills" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="ArtilleryDefenseKills">
+96
+</div>
+<div class="rank">
+<span></span>
+- Top 80% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(80% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Bombs Placed <a href="/bf1/leaderboards/pc/BombsPlaced" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="BombsPlaced">
+0
+</div>
+<div class="rank">
+<span></span>
+- Top 100% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(100% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Bombs Defused <a href="/bf1/leaderboards/pc/BombsDefused" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="BombsDefused">
+0
+</div>
+<div class="rank">
+<span></span>
+- Top 100% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+ <div style="right: calc(100% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Carriers Kills <a href="/bf1/leaderboards/pc/CarriersKills" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="CarriersKills">
+0
+</div>
+<div class="rank">
+<span></span>
+- Top 100% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(100% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Carriers Released <a href="/bf1/leaderboards/pc/CarriersReleased" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="CarriersReleased">
+0
+</div>
+<div class="rank">
+<span></span>
+- Top 100% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(100% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Messages Delivered <a href="/bf1/leaderboards/pc/MessagesDelivered" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="MessagesDelivered">
+0
+</div>
+<div class="rank">
+<span></span>
+- Top 100% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(100% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Messages Written <a href="/bf1/leaderboards/pc/MessagesWritten" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="MessagesWritten">
+0
+</div>
+<div class="rank">
+ <span></span>
+- Top 100% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(100% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="card-heading">
+<h2 class="card-title">Infantry Kills</h2>
+</div>
+<div class="card">
+<div class="stats-large">
+<div class="stat">
+<div class="name">
+Infantry Kills <a href="/bf1/leaderboards/pc/InfantryKills" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="InfantryKills">
+96
+</div>
+<div class="rank">
+<span></span>
+- Top 91% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(91% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Infantry KPM <a href="/bf1/leaderboards/pc/InfantryKpm" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="InfantryKpm">
+0.95
+</div>
+<div class="rank">
+<span></span>
+- Top 45% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(45% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Infantry Kd <a href="/bf1/leaderboards/pc/InfantryKd" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="InfantryKd">
+0.79
+</div>
+<div class="rank">
+<span></span>
+- Top 66% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(66% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Vehicle Kills <a href="/bf1/leaderboards/pc/VehicleKills" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="VehicleKills">
+0.00
+</div>
+<div class="rank">
+<span></span>
+- Top 100% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(100% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Vehicle KPM <a href="/bf1/leaderboards/pc/VehicleKPM" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="VehicleKPM">
+0.00
+</div>
+<div class="rank">
+<span></span>
+- Top 100% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(100% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="card-heading">
+<h2 class="card-title">Support</h2>
+</div>
+<div class="card">
+<div class="stats-large">
+<div class="stat">
+<div class="name">
+Resupplies <a href="/bf1/leaderboards/pc/Resupplies" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="Resupplies">
+0
+</div>
+<div class="rank">
+<span></span>
+- Top 100% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(100% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Resupplies PM <a href="/bf1/leaderboards/pc/ResuppliesPM" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="ResuppliesPM">
+0.00
+</div>
+<div class="rank">
+<span></span>
+- Top 100%  <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(100% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Heals <a href="/bf1/leaderboards/pc/Heals" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="Heals">
+160
+</div>
+<div class="rank">
+<span></span>
+- Top 79% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(79% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Healing PM <a href="/bf1/leaderboards/pc/HealingPM" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="HealingPM">
+2.45
+</div>
+<div class="rank">
+<span></span>
+- Top 37% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(37% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Repairs <a href="/bf1/leaderboards/pc/Repairs" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="Repairs">
+0
+</div>
+<div class="rank">
+<span></span>
+- Top 100% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(100% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Revives <a href="/bf1/leaderboards/pc/Revives" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="Revives">
+59
+</div>
+<div class="rank">
+<span></span>
+- Top 75% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(75% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Suppression Assist <a href="/bf1/leaderboards/pc/SupressionAssist" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="SupressionAssist">
+12
+</div>
+<div class="rank">
+<span></span>
+- Top 98% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(98% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="card-heading">
+<h2 class="card-title">Squad</h2>
+</div>
+<div class="card">
+<div class="stats-large">
+<div class="stat">
+<div class="name">
+Ace Squad <a href="/bf1/leaderboards/pc/AceSquad" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="AceSquad">
+2
+</div>
+<div class="rank">
+<span></span>
+- Top 75% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(75% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+MVP <a href="/bf1/leaderboards/pc/MVP" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="MVP">
+0
+</div>
+<div class="rank">
+<span></span>
+- Top 100% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(100% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Squad Score <a href="/bf1/leaderboards/pc/SquadScore" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="SquadScore">
+15,097.00
+</div>
+<div class="rank">
+<span></span>
+- Top 94% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(94% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Orders Completed <a href="/bf1/leaderboards/pc/OrdersCompleted" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="OrdersCompleted">
+14
+</div>
+<div class="rank">
+<span></span>
+- Top 79% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(79% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Orders Completed PG <a href="/bf1/leaderboards/pc/OrdersCompletedPG" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="OrdersCompletedPG">
+1.40
+</div>
+<div class="rank">
+<span></span>
+- Top 71% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(71% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Squad Spawns <a href="/bf1/leaderboards/pc/SquadSpawns" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="SquadSpawns">
+53
+</div>
+<div class="rank">
+<span></span>
+- Top 80% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(80% - 2px)"></div>
+ </div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Squad Wipes <a href="/bf1/leaderboards/pc/SquadWipes" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="SquadWipes">
+1
+</div>
+<div class="rank">
+<span></span>
+- Top 82% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(82% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="card-heading">
+<h2 class="card-title">Extra</h2>
+</div>
+<div class="card">
+<div class="stats-large">
+<div class="stat">
+<div class="name">
+Avenger Kills <a href="/bf1/leaderboards/pc/AvengerKills" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="AvengerKills">
+11
+</div>
+<div class="rank">
+<span></span>
+- Top 97% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(97% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Award Score <a href="/bf1/leaderboards/pc/AwardScore" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="AwardScore">
+39,500.00
+</div>
+<div class="rank">
+<span></span>
+- Top 80% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(80% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Bonus Score <a href="/bf1/leaderboards/pc/BonusScore" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="BonusScore">
+13,852.00
+ </div>
+<div class="rank">
+<span></span>
+- Top 97% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(97% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Dogtags Taken <a href="/bf1/leaderboards/pc/DogTagsTaken" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="DogTagsTaken">
+1
+</div>
+<div class="rank">
+<span></span>
+- Top 96% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(96% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Headshots <a href="/bf1/leaderboards/pc/HeadShots" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="HeadShots">
+17
+</div>
+<div class="rank">
+<span></span>
+- Top 95% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(95% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Highest Kill Streak <a href="/bf1/leaderboards/pc/HighestKillStreak" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="HighestKillStreak">
+8
+</div>
+<div class="rank">
+<span></span>
+- Top 89% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(89% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Longest Headshot <a href="/bf1/leaderboards/pc/LongestHeadShot" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="LongestHeadShot">
+109
+</div>
+<div class="rank">
+<span></span>
+- Top 91% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(91% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Nemesis Kills <a href="/bf1/leaderboards/pc/NemisisKills" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="NemisisKills">
+0
+</div>
+<div class="rank">
+<span></span>
+- Top 100% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(100% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Highest Nemesis Streak <a href="/bf1/leaderboards/pc/NemisisKillStreak" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="NemisisKillStreak">
+3
+</div>
+<div class="rank">
+<span></span>
+- Top 98% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(98% - 2px)"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="stat">
+<div class="name">
+Savior Kills <a href="/bf1/leaderboards/pc/SaviorKills" class="leaderboard-link"><i class="fa fa-list-ol"></i></a>
+</div>
+<div class="value" data-stat="SaviorKills">
+10
+</div>
+<div class="rank">
+<span></span>
+- Top 98% <div class="rank percentile">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(98% - 2px)"></div>
+</div>
+</div>
+</div>
+ </div>
+</div>
+</div>
+<div class="additional">
+<div class="additional-content">
+<div class="card-table-container">
+<table class="card-table items">
+<thead>
+<tr class="inline-title">
+<th class="title">Game Modes</th>
+<th>Score</th>
+<th>Wins</th>
+<th>Losses</th>
+<th>Win %</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="details">
+<div class="title">Conquest</div>
+</td>
+<td class="stat detailed">
+<div class="value">21,625</div>
+<div class="rank ">
+Top 91%
+</div>
+</td>
+<td class="stat detailed">
+<div class="value">3</div>
+<div class="rank ">
+Top 89%
+</div>
+</td>
+<td class="stat detailed">
+<div class="value">4</div>
+<div class="rank ">
+Top 88%
+</div>
+</td>
+<td class="stat detailed">
+<div class="value">42.90</div>
+<div class="rank ">
+Top 77%
+</div>
+</td>
+</tr>
+<tr>
+<td class="details">
+<div class="title">Rush</div>
+</td>
+<td class="stat detailed">
+</td>
+<td class="stat detailed">
+</td>
+<td class="stat detailed">
+</td>
+<td class="stat detailed">
+</td>
+</tr>
+<tr>
+<td class="details">
+<div class="title">Domination</div>
+</td>
+<td class="stat detailed">
+</td>
+<td class="stat detailed">
+</td>
+<td class="stat detailed">
+</td>
+ <td class="stat detailed">
+</td>
+</tr>
+<tr>
+<td class="details">
+<div class="title">Operations Small</div>
+</td>
+<td class="stat detailed">
+</td>
+<td class="stat detailed">
+</td>
+<td class="stat detailed">
+</td>
+<td class="stat detailed">
+</td>
+</tr>
+<tr>
+<td class="details">
+<div class="title">War Pigeons</div>
+</td>
+<td class="stat detailed">
+</td>
+<td class="stat detailed">
+</td>
+<td class="stat detailed">
+</td>
+<td class="stat detailed">
+</td>
+</tr>
+<tr>
+<td class="details">
+<div class="title">Team Deathmatch</div>
+</td>
+<td class="stat detailed">
+</td>
+<td class="stat detailed">
+<div class="value">2</div>
+<div class="rank ">
+Top 66%
+</div>
+</td>
+<td class="stat detailed">
+<div class="value">1</div>
+<div class="rank ">
+Top 75%
+</div>
+</td>
+<td class="stat detailed">
+<div class="value">66.70</div>
+<div class="rank ">
+Top 15%
+</div>
+</td>
+</tr>
+<tr>
+<td class="details">
+<div class="title">Frontlines</div>
+</td>
+<td class="stat detailed">
+</td>
+<td class="stat detailed">
+</td>
+<td class="stat detailed">
+</td>
+<td class="stat detailed">
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="card-table-container">
+<table class="card-table items">
+<thead>
+<tr class="inline-title">
+<th class="title">Kits</th>
+<th>Score</th>
+<th>Kills</th>
+<th>KPM</th>
+<th>Time Played</th>
+<th>SPM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="details">
+<div class="title">Medic</div>
+</td>
+<td class="stat detailed">
+<div class="value">130,773</div>
+<div class="rank ">
+Top 74%
+</div>
+</td>
+<td class="stat detailed">
+<div class="value">55</div>
+<div class="rank ">
+Top 84%
+</div>
+</td>
+<td class="stat detailed">
+<div class="value">0.84</div>
+<div class="rank ">
+Top 47%
+</div>
+</td>
+<td class="stat detailed">
+<div class="value">1h 5m </div>
+<div class="rank ">
+Top 86%
+</div>
+</td>
+<td class="stat detailed">
+<div class="value">2,004.44</div>
+<div class="rank  green">
+Top 0.2%
+</div>
+</td>
+</tr>
+<tr>
+<td class="details">
+<div class="title">Assault</div>
+</td>
+<td class="stat detailed">
+<div class="value">16,624</div>
+<div class="rank ">
+Top 93%
+</div>
+</td>
+<td class="stat detailed">
+<div class="value">18</div>
+<div class="rank ">
+Top 92%
+</div>
+</td>
+ <td class="stat detailed">
+<div class="value">1.03</div>
+<div class="rank ">
+Top 44%
+</div>
+</td>
+<td class="stat detailed">
+<div class="value">17m </div>
+<div class="rank ">
+Top 94%
+</div>
+</td>
+<td class="stat detailed">
+<div class="value">948.39</div>
+<div class="rank  green">
+Top 4%
+</div>
+</td>
+</tr>
+<tr>
+<td class="details">
+<div class="title">Scout</div>
+</td>
+<td class="stat detailed">
+<div class="value">10,784</div>
+<div class="rank ">
+Top 91%
+</div>
+</td>
+<td class="stat detailed">
+<div class="value">23</div>
+<div class="rank ">
+Top 88%
+</div>
+</td>
+<td class="stat detailed">
+<div class="value">1.25</div>
+<div class="rank ">
+Top 11%
+</div>
+</td>
+<td class="stat detailed">
+<div class="value">18m </div>
+<div class="rank ">
+Top 92%
+</div>
+</td>
+<td class="stat detailed">
+<div class="value">584.96</div>
+<div class="rank ">
+Top 13%
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="additional-ad">
+<div style="width:100%;text-align:center;">
+<script src="//tags-cdn.deployads.com/a/battlefieldtracker.com.js" async></script>
+<script>
+            if (window.matchMedia !== undefined && window.matchMedia("(min-width: 990px) and (max-width: 1200px)").matches) {
+                document.write('<div class="ad-tag" data-ad-name="Content: 300x250" data-ad-size="300x250" data-ad-report="bottom right"></div>');
+            }
+            else if (window.matchMedia !== undefined && window.matchMedia("(min-width: 1201px)").matches) {
+                document.write('<div class="ad-tag" data-ad-name="SideBar:  160x600" data-ad-size="160x600" data-ad-report="bottom right"></div>');
+            }
+            (deployads = window.deployads || []).push({});
+        </script>
+</div>
+</div>
+</div>
+</div>
+<div class="aside">
+<div style="margin-bottom:8px">
+<div class="ad-tag" data-ad-name="Content: 300x250" data-ad-size="300x250" data-ad-report="bottom right" data-ad-targeting="platform=other"></div>
+<script src="//tags-cdn.deployads.com/a/battlefieldtracker.com.js" async></script>
+<script>(deployads = window.deployads || []).push({});</script>
+</div>
+<div class="overview-row large-wrap">
+<div class="column-rounds">
+<div class="card-heading">
+<h2 class="card-title">Recent Sessions <a href="javascript:;" class="pull-right" onclick="trnToolTips.showHelp('Recent Sessions','Date/Times are based on when you updated your stats, not when you played.  Refresh your stats often to keep this data up to date!');"><i class="ion-help-circled"></i></a></h2>
+</div>
+<div class="card">
+<div class="card-body player-sessions">
+<div class="sessions">
+<div class="title">
+<div class="time">
+<h4 style="font-size:14px;color:#f17f1a;"><span data-livestamp="2018-03-16T12:00:00.000Z"></span></h4>
+</div>
+<div class="stat">
+0W/1L (0%)
+</div>
+</div>
+<div class="session-stats">
+<div style="width: calc(33% - 10px); height:70px;">
+<div>664.97</div>
+<div style="min-height:10px;">
+<div class="rank percentile" title="Top 69%">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(69% - 7px)"></div>
+</div>
+</div>
+</div>
+<div class="stat-label">Score/Min</div>
+</div>
+<div style="width: calc(33% - 10px); height:70px;">
+<div>0.64</div>
+<div style="min-height:10px;">
+<div class="rank percentile" title="Top 93%">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(93% - 7px)"></div>
+</div>
+</div>
+</div>
+<div class="stat-label">K/D Ratio</div>
+</div>
+<div style="width: calc(33% - 10px); height:70px;">
+<div>0.81</div>
+<div style="min-height:10px;">
+<div class="rank percentile" title="Top 66%">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(66% - 7px)"></div>
+</div>
+</div>
+</div>
+<div class="stat-label">Kills/Min</div>
+</div>
+<div style="width: calc(33% - 10px); height:70px;">
+<div>18</div>
+<div style="color:#9b9b9b">BTR Score</div>
+</div>
+<div style="width: calc(33% - 10px); height:70px;">
+<div>14,851</div>
+<div style="color:#9b9b9b">Game Score</div>
+</div>
+<div style="width: calc(33% - 10px); height:70px;">
+<div>22m </div>
+<div style="color:#9b9b9b">Time Played</div>
+</div>
+</div>
+</div>
+<div class="sessions">
+<div class="title">
+<div class="time">
+<h4 style="font-size:14px;color:#f17f1a;"><span data-livestamp="2018-03-13T00:00:00.000Z"></span></h4>
+</div>
+<div class="stat">
+5W/4L (56%)
+</div>
+</div>
+<div class="session-stats">
+<div style="width: calc(33% - 10px); height:70px;">
+<div>2,494.38</div>
+<div style="min-height:10px;">
+<div class="rank percentile" title="Top 0.5%">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(0.5% - 7px)"></div>
+</div>
+</div>
+</div>
+<div class="stat-label">Score/Min</div>
+</div>
+<div style="width: calc(33% - 10px); height:70px;">
+<div>0.84</div>
+<div style="min-height:10px;">
+<div class="rank percentile" title="Top 80%">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(80% - 7px)"></div>
+</div>
+</div>
+</div>
+<div class="stat-label">K/D Ratio</div>
+</div>
+<div style="width: calc(33% - 10px); height:70px;">
+<div>0.99</div>
+<div style="min-height:10px;">
+<div class="rank percentile" title="Top 46%">
+<div class="percentile-bar" style="float:left;">
+<div style="right: calc(46% - 7px)"></div>
+</div>
+ </div>
+</div>
+<div class="stat-label">Kills/Min</div>
+</div>
+<div style="width: calc(33% - 10px); height:70px;">
+<div>179</div>
+<div style="color:#9b9b9b">BTR Score</div>
+</div>
+<div style="width: calc(33% - 10px); height:70px;">
+<div>196,682</div>
+<div style="color:#9b9b9b">Game Score</div>
+</div>
+<div style="width: calc(33% - 10px); height:70px;">
+<div>1h 18m </div>
+<div style="color:#9b9b9b">Time Played</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="column-rounds">
+<script>
+
+    $(function () {
+
+        $.ajax({
+            url: '/bf1/partials/_chartusage',
+            data: { playerId: '1484565' },
+            type: 'GET'
+        })
+        .done(function (data) {
+            var total = data.series["time"].reduce(function (prev, point) { return prev + parseInt(point[1]); }, 0);
+            console.log(total);
+            var series = data.series["time"].map(function (point) {
+                return [point[0], (parseInt(point[1]) / total) * 100];
+            });
+
+            $("#usageChart").highcharts({
+                chart: {
+                    type: 'pie'
+                },
+                title: {
+                    text: 'Time Played by percentage',
+                    style: {
+                        display: 'none'
+                    }
+                },
+                subtitle: {
+                    text: '',
+                    style: {
+                        display: 'none'
+                    }
+                },
+                legend: {
+                    style: {
+                        display: 'none'
+                    }
+                },
+                plotOptions: {
+                    pie: {
+                        dataLabels: {
+                            enabled: true,
+                            inside: true,
+                            format: "{point.name}: {percentage:.0f}%",
+                            distance: -42,
+                            color: 'white'
+                        },
+                        minSize: 200,
+                        inside: true,
+                        showInLegend: false,
+                    }
+                },
+                tooltip: {
+                    pointFormat: '{point.y:.2f}%'
+                },
+                series: [{
+                    data: series
+                }]
+            });
+        })
+
+    });
+</script>
+<div class="card-heading">
+<h3 class="card-title">Time Used by %</h3>
+</div>
+<div class="card">
+<div id="usageChart" style="height: 240px;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="graphics-modal" class="modal fade" role="dialog">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+<h4 class="modal-title">Battlefield 1 Graphics</h4>
+</div>
+<div class="modal-body">
+<img id="graphics-1" nosrc="http://bots.tracker.network/bf1/bf1.php?platform=3&username=RT_Cheesemon-US-" style="width:500px;margin-bottom:15px;" />
+<div>
+<strong>BBCode</strong><br />
+[url=https://battlefieldtracker.com/bf1/profile/pc/RT_Cheesemon-US-][img]http://bots.tracker.network/bf1/bf1.php?platform=3&username=RT_Cheesemon-US-[/img][/url]
+</div><br />
+<div>
+<strong>HTML</strong><br />
+&#x3C;a href=&#x22;https://battlefieldtracker.com/bf1/profile/pc/RT_Cheesemon-US-&#x22;&#x3E;&#x3C;img src=&#x22;http://bots.tracker.network/bf1/bf1.php?platform=3&#x26;username=RT_Cheesemon-US-&#x22; /&#x3E;&#x3C;/a&#x3E;
+</div><br />
+<div>
+<strong>Image URL</strong><br />
+http://bots.tracker.network/bf1/bf1.php?platform=3&username=RT_Cheesemon-US-
+</div>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+<style>
+    @media(max-width: 1200px)
+    {
+
+        .bf1-profile .profile-main .aside {
+            order: 2;
+        }
+    }
+    .bf1-profile .ion-android-arrow-dropup {
+        color:#77B300 !important;
+    }
+    .bf1-profile .ion-android-arrow-dropdown {
+        color:red !important;
+    }
+</style>
+<script src="/bundles/profiles"></script>
+<script type="text/javascript">
+    //tooltips 
+    trnToolTips.addTemplate('sitescore', 'BTR Score', '<p>This is our own in-house formula that we have developed to determine skill overall.  Based mostly on individual performance!</p> <p>This Stat is updated each time you collect your stats.  We look at the difference since the last update, and compute how you did, and add (or subtract) it onto your score.  This rating will only increase until you have hit a threshold then will start to sharply punish you for bad performance!  <a href="https://battlefieldtracker.com/Forums/Post/2765/24/site-news-btr-score">Here is even more explanation with examples</a></p>');
+
+
+    //trn profile deltas
+    var currentStatsJson = '[{"Field":"SiteScore","Value":197.0},{"Field":"SiteScorePM","Value":1.95},{"Field":"Spm","Value":2090.59},{"Field":"Kd","Value":0.79},{"Field":"Wl","Value":50.0},{"Field":"Kg","Value":9.6},{"Field":"Kpm","Value":2.02},{"Field":"InfantryKpm","Value":0.95},{"Field":"InfantryKd","Value":0.79},{"Field":"VehicleKills","Value":0.0},{"Field":"VehicleKPM","Value":0.0},{"Field":"Skill","Value":213.92},{"Field":"CurrentRankProgress","Value":6533.0},{"Field":"CurrentRankTotal","Value":30000.0},{"Field":"ResuppliesPM","Value":0.0},{"Field":"AccuracyRatio","Value":0.19},{"Field":"AwardScore","Value":39500.0},{"Field":"BonusScore","Value":13852.0},{"Field":"HealingPM","Value":2.45},{"Field":"SquadScore","Value":15097.0},{"Field":"OrdersCompletedPG","Value":1.4}]';
+    trnDeltas.process('.bf1-profile', 'profile-deltas', 'p1484565', currentStatsJson);
+
+
+</script>
+</div>
+<div class="row">
+<div class="col-xs-12" style="margin-top: 20px; margin-bottom: 10px;text-align:center;">
+<script src="//tags-cdn.deployads.com/a/battlefieldtracker.com.js" async></script>
+<script>
+        if (window.device == 'mobile') {
+            document.write('<div class="ad-tag" data-ad-name="Footer Mobile: 300x250" data-ad-size="300x250" data-ad-report="bottom right"></div>');
+        }
+        else {
+            document.write('<div class="ad-tag" data-ad-name="Footer Desktop: 728x90" data-ad-size="728x90" data-ad-report="bottom right"></div>');
+        }
+        (deployads = window.deployads || []).push({});
+    </script>
+</div>
+</div>
+</div>
+<div class="container">
+<footer class="site-footer">
+ <div class="footer-box-container">
+<div class="footer-box">
+<span class="subtitle">Tracker Network</span>
+<ul>
+<li><a href="http://destinytracker.com">Destiny Tracker</a></li>
+<li><a href="http://codtracker.net">Call of Duty Tracker</a></li>
+<li><a href="http://overwatchtracker.com">Overwatch Tracker</a></li>
+<li><a href="http://battlefieldtracker.com">Battlefield Tracker</a></li>
+<li><a href="http://halotracker.com">Halo Tracker</a></li>
+<li><a href="http://rocketleague.tracker.network">Rocket League Tracker</a></li>
+<li><a href="http://divisiontracker.com">The Division Tracker</a></li>
+<li><a href="http://csgo.tracker.network">CS:GO Tracker</a></li>
+<li><a href="http://fhtracker.com">For Honor Tracker</a></li>
+<li><a href="http://pubgtracker.com">PUBG Tracker</a></li>
+<li><a href="http://anthemtracker.com">Anthem Tracker</a></li>
+<li><a href="http://r6.tracker.network">Rainbow 6 Siege Tracker</a></li>
+<li><a href="http://fortnitetracker.com">Fortnite Tracker</a></li>
+</ul>
+</div>
+<div class="footer-box">
+<span class="subtitle">Contact Us</span>
+<ul>
+<li><a href="/forum/5/site-bugs-requests"><i class="ion-bug"></i> Report a Bug</a></li>
+<li><a href="/Contact"><i class="ion-email"></i> Contact Staff</a></li>
+<li><a href="/Contact"><i class="ion-quote"></i> Advertise</a></li>
+</ul>
+</div>
+<div class="footer-box">
+<span class="subtitle">Support Us</span>
+<a href="/supporter" style="display: block; padding-top: 4px;"><img class="img-responsive" src="/Images/paypal.png"></a>
+</div>
+<div class="footer-box">
+<span class="subtitle">Social</span>
+<ul>
+<li><a href="https://twitter.com/trackernetwork"><i class="ion-social-twitter"></i> Twitter</a></li>
+<li><a href="https://facebook.com/trackernetwork"><i class="ion-social-facebook"></i> Facebook</a></li>
+</ul>
+</div>
+</div>
+<div class="row bottom-bit">
+<div class="col-xs-12 col-sm-8">
+&copy; 2018 Battlefield Tracker. Battlefield is a registered trademark of Electronic Arts.
+This website uses data provided pursuant to Electronic Arts’ Battlefield 1 Stats Terms. Trademarks are the property of their respective owners. Game materials copyright Electronic Arts Inc. Electronic Arts has not endorsed and is not responsible for this site or its content.
+</div>
+<div class="col-xs-12 col-sm-4" style="text-align: right;"><a href="/home/privacypolicy">Privacy Policy</a></div>
+</div>
+</footer>
+</div>
+<script src="/bundles/bootstrap?v=z8M3-2c-tQ37tmrVZMvGhbNI981d0X6pgPJqdyPXlTw1"></script>
+<input id="ControllerName" name="ControllerName" type="hidden" value="BF1" />
+<input id="ActionName" name="ActionName" type="hidden" value="Profile" />
+<div id="toast-wrapper">
+<script type="text/javascript">
+        var notifs = [];
+        var added = 0;
+        function checkNotifications() {
+            $.ajax({
+                url: '//notifications.thetrackernetwork.com/api/notifications/?site=bftr&userName=2804:14d:1030:8724:7dde:e59d:4585:22bf',
+                type: 'GET'
+            })
+            .success(function (results) {
+                if (results != null) {
+                    $.each(results, function (index, item) {
+                        if (notifs.indexOf(item.RowKey) >= 0)
+                            return;
+                        else if (added > 5)
+                            return;
+
+                        new PNotify({
+                            title: item.title,
+                            text: item.body,
+                            hide: false,
+                            type: 'info',
+                            opacity: .8,
+                            addclass: 'trackernotification',
+                            buttons: {
+                                sticker: false,
+                                closer_hover: false,
+                                closer: true
+                            },
+                            before_close: function (PNotify, timer_hide) {
+                                $.ajax({
+                                    url: '//notifications.thetrackernetwork.com//api/notifications',
+                                    data: { site: 'bftr', userName: '2804:14d:1030:8724:7dde:e59d:4585:22bf', id: item.RowKey, type: item.type },
+                                    type: 'DELETE'
+                                });
+                            }
+                        });
+
+                        notifs.push(item.RowKey);
+
+                        added++;
+
+                    });
+                }
+            });
+        }
+
+        checkNotifications();
+        setInterval(checkNotifications, 90000);
+    </script>
+</div>
+<script src="/Scripts/blockadblock.js"></script>
+<script type="text/javascript">
+
+            function adBlockNotDetected() {
+                $('#top-supportsite').hide();
+            }
+            function adBlockDetected() {
+                $('#top-supportsite').show();
+
+
+                var html = '<div style="width: 100%; margin-top:5px;margin-bottom:10px;font-weight: normal;text-transform: none;"><div><div style="width: 100%; background-color: rgba(0, 0, 0, .7); border: 1px solid rgb(241, 127, 26); text-align: center;"><i class="fa fa-smile-o fa-2x" style="margin-top: 6px;"></i><div style="margin: 0px auto; width: 80%; color:#888; margin-top: 10px; margin-bottom:10px; font-size: 10pt; line-height: 1.5em;">Please consider adding Battlefield Tracker to your adblock whitelist! Our ads support the development and hardware costs of running this site. Really hate ads? Become a  <a href="/supporter">premium user</a> to load the site without ads (and other benefits!)</div></div><div style="clear: both;"></div></div></div>';
+                $('.please-support').html(html);
+            }
+
+            if (typeof PleaseSupportSite === 'undefined') {
+                adBlockDetected();
+            } else {
+                PleaseSupportSite.onDetected(adBlockDetected);
+                PleaseSupportSite.onNotDetected(adBlockNotDetected);
+            }
+        </script>
+</body>
+</html>

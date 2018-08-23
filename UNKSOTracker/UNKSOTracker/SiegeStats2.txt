@@ -1,0 +1,23 @@
+Wins
+Losses
+Abandons
+MMR
+Highest MMR
+Kills
+Deaths
+K/D Ratio
+Matches Lost
+Matches Won
+Headshots
+Kill Assists
+Accuracy
+Reinforcements Deployed
+Barricades Deployed
+DBNOs
+Penetration Kills
+Bullets Hit
+Bullets Fired
+Suicides
+Melee Kills
+Gadgets Destroyed
+Revives

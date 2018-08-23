@@ -1,0 +1,197 @@
+{
+  "successful": true,
+  "result": {
+    "accuracyRatio": 0.22884345058944264,
+    "avengerKills": 1792,
+    "awardScore": 4014000.0,
+    "basicStats": {
+      "completion": [],
+      "equippedDogtags": null,
+      "highlights": null,
+      "highlightsByType": null,
+      "kills": 18279,
+      "wins": 380,
+      "deaths": 6010,
+      "spm": 1396.33,
+      "skill": 521.63,
+      "soldierImageUrl": null,
+      "kpm": 1.26,
+      "losses": 305,
+      "timePlayed": 869061,
+      "rank": null,
+      "rankProgress": null
+    },
+    "bonusScore": 3647190.0,
+    "dogtagsTaken": 667,
+    "favoriteClass": "Support",
+    "flagsCaptured": 3008,
+    "flagsDefended": 4552,
+    "gameModeStats": [
+      {
+        "name": "Possession",
+        "prettyName": "WAR PIGEONS",
+        "score": 13005.0,
+        "losses": 2,
+        "wins": 1,
+        "winLossRatio": 0.5
+      },
+      {
+        "name": "Breakthrough",
+        "prettyName": "OPERATIONS SMALL",
+        "score": 403000.0,
+        "losses": 18,
+        "wins": 32,
+        "winLossRatio": 1.7777777777777777
+      },
+      {
+        "name": "Conquest",
+        "prettyName": "CONQUEST",
+        "score": 4336180.0,
+        "losses": 266,
+        "wins": 322,
+        "winLossRatio": 1.2105263157894737
+      },
+      {
+        "name": "Domination",
+        "prettyName": "DOMINATION",
+        "score": 2500.0,
+        "losses": 0,
+        "wins": 0,
+        "winLossRatio": 0.0
+      },
+      {
+        "name": "Rush",
+        "prettyName": "RUSH",
+        "score": 14760.0,
+        "losses": 2,
+        "wins": 9,
+        "winLossRatio": 4.5
+      },
+      {
+        "name": "TeamDeathMatch",
+        "prettyName": "TEAM DEATHMATCH",
+        "score": 0.0,
+        "losses": 2,
+        "wins": 0,
+        "winLossRatio": 0.0
+      }
+    ],
+    "headShots": 1154,
+    "heals": 21662.0,
+    "highestKillStreak": 90,
+    "kdr": 3.04,
+    "killAssists": 987.0,
+    "kitStats": [
+      {
+        "kills": 3267.0,
+        "kitType": {},
+        "name": "Support",
+        "prettyName": "SUPPORT",
+        "score": 3245030.0,
+        "secondsAs": 213291.0
+      },
+      {
+        "kills": 2407.0,
+        "kitType": {},
+        "name": "Medic",
+        "prettyName": "MEDIC",
+        "score": 2353260.0,
+        "secondsAs": 154165.0
+      },
+      {
+        "kills": 2912.0,
+        "kitType": {},
+        "name": "Scout",
+        "prettyName": "SCOUT",
+        "score": 1963030.0,
+        "secondsAs": 158202.0
+      },
+      {
+        "kills": 3293.0,
+        "kitType": {},
+        "name": "Assault",
+        "prettyName": "ASSAULT",
+        "score": 2142770.0,
+        "secondsAs": 138307.0
+      },
+      {
+        "kills": 313.0,
+        "kitType": {},
+        "name": "Cavalry",
+        "prettyName": "CAVALRY",
+        "score": 413822.0,
+        "secondsAs": 26060.4
+      },
+      {
+        "kills": 86.0,
+        "kitType": {},
+        "name": "Tanker",
+        "prettyName": "TANKER",
+        "score": 2204640.0,
+        "secondsAs": 155556.0
+      },
+      {
+        "kills": 0.0,
+        "kitType": {},
+        "name": "Pilot",
+        "prettyName": "PILOT",
+        "score": 77.0,
+        "secondsAs": 265.07
+      }
+    ],
+    "longestHeadShot": 257.44,
+    "nemesisKills": 264.0,
+    "nemesisKillStreak": 11.0,
+    "repairs": 389.0,
+    "revives": 1780.0,
+    "roundHistory": null,
+    "roundsPlayed": 685,
+    "saviorKills": 2216,
+    "squadScore": 2342860.0,
+    "suppressionAssist": 2283.0,
+    "vehicleStats": [
+      {
+        "killsAs": 222.0,
+        "name": "Stationary Weapons",
+        "prettyName": "Stationary Weapons",
+        "timeSpent": 11780.0,
+        "vehiclesDestroyed": 0.0
+      },
+      {
+        "killsAs": 42.0,
+        "name": "Transport Land Vehicles",
+        "prettyName": "Transport Land Vehicles",
+        "timeSpent": 8035.75,
+        "vehiclesDestroyed": 0.0
+      },
+      {
+        "killsAs": 54.0,
+        "name": "Horse",
+        "prettyName": "Horse",
+        "timeSpent": 9147.43,
+        "vehiclesDestroyed": 0.0
+      },
+      {
+        "killsAs": 3.0,
+        "name": "Air Vehicles",
+        "prettyName": "Air Vehicles",
+        "timeSpent": 1009.6,
+        "vehiclesDestroyed": 0.0
+      },
+      {
+        "killsAs": 4640.0,
+        "name": "Armoured Land Vehicles",
+        "prettyName": "Armoured Land Vehicles",
+        "timeSpent": 176477.0,
+        "vehiclesDestroyed": 0.0
+      }
+    ]
+  },
+  "profile": {
+    "trackerUrl": "https://battlefieldtracker.com/bf1/profile/pc/MrQuin44",
+    "displayName": "MrQuin44",
+    "personaId": 414380022,
+    "platform": 3
+  },
+  "bbPrefix": "https://eaassets-a.akamaihd.net/battlelog/battlebinary"
+}
