@@ -1,8 +1,0 @@
-<div class="value" data-stat="Resupplies">
-<div class="value" data-stat="AceSquad">
-<div class="value" data-stat="MVP">
-<div class="value" data-stat="OrdersCompleted">
-<div class="value" data-stat="SquadSpawns">
-<div class="value" data-stat="SquadWipes">
-<div class="value" data-stat="InfantryKills">
-<div class="value" data-stat="VehicleKills">
