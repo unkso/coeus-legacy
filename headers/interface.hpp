@@ -57,6 +57,4 @@ public:
 
 void RaptorHeader();
 
-void InterfaceHeader();
-
 #endif //RAPTOR_NEW_INTERFACE_HPP

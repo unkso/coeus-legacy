@@ -682,12 +682,12 @@ namespace RaptorR6 {
 
         void Exporter(rPack p) {
             std::string rdb;
-            std::cout << "Type the name of the Raptor Database: ";
+            std::cout << "Type the name of the Coeus Database: ";
             getline(std::cin, rdb);
             std::cout << '\n';
             std::ofstream fout("R" + rdb + ".csv");
             if (fout.good()) {
-                fout << "UNKSO - Raptor Project" << '\n';
+                fout << "UNKSO - Coeus Project" << '\n';
                 fout << "Rainbow Six Siege Database - #" + rdb << '\n';
                 fout
                         << "================================================================================================================="
@@ -791,7 +791,7 @@ namespace RaptorR6 {
                     users.push_back(aux_users[j]);
                 }
                 j++;
-                std::cout << "Number of users logged by the Raptor Tool: " << users.size() << '\n';
+                std::cout << "Number of users logged by the Coeus Tool: " << users.size() << '\n';
                 if (users.size() == max_players) { break; }
             }
             for (auto &plr : ar6::player_fetcher(users)) {
@@ -851,7 +851,7 @@ namespace RaptorR6 {
                 int op;
                 std::string filename;
                 std::cout << "==========================================================================" << '\n';
-                std::cout << "Do you wish to create a Raptor List for players of which region?" << '\n';
+                std::cout << "Do you wish to create a Coeus List for players of which region?" << '\n';
                 std::cout << "1 - Americas" << '\n';
                 std::cout << "2 - Europe" << '\n';
                 std::cout << "3 - Asia" << '\n';
@@ -861,7 +861,7 @@ namespace RaptorR6 {
                 std::cin.get();
                 if (op != 4) {
                     std::cout << "==========================================================================" << '\n';
-                    std::cout << "Type a filename for the Exported Raptor List" << '\n';
+                    std::cout << "Type a filename for the Exported Coeus List" << '\n';
                     std::cout << "Input: ";
                     getline(std::cin, filename);
                     std::cout << "==========================================================================" << '\n';
@@ -887,20 +887,20 @@ namespace RaptorR6 {
 
     void Header() {
         int op;
-        std::cout << "Welcome to the Raptor Tool! Read the instructions and choose an option to begin working." << '\n';
+        std::cout << "Welcome to the Coeus Tool! Read the instructions and choose an option to begin working." << '\n';
         std::cout
                 << "========================================================================================================================"
                 << '\n';
         std::cout << "Instructions of Use: " << '\n';
         std::cout
-                << "The Logger module is responsible for searching the Rainbow Six Leaderboards for players to be classified. The Raptor List will not be generated in this step."
+                << "The Logger module is responsible for searching the Rainbow Six Leaderboards for players to be classified. The Coeus List will not be generated in this step."
                 << "The Sync module is responsible for comparing the stats of the players in our database with the stats of an initial time and the most recents stats from the R6 API."
-                << "After the update. This module will reunite those who meet the adequeate criteria for being recruited into the =US= and export those players into a .csv file which is what is called the 'Raptor List'.\n";
+                << "After the update. This module will reunite those who meet the adequeate criteria for being recruited into the =US= and export those players into a .csv file which is what is called the 'Coeus List'.\n";
         std::cout
                 << "========================================================================================================================"
                 << '\n';
         std::cout << "1 - Find and Log more players (Logger)" << '\n';
-        std::cout << "2 - Update Database and Generate Raptor List (Sync)" << '\n';
+        std::cout << "2 - Update Database and Generate Coeus List (Sync)" << '\n';
         std::cout << "3 - Exit" << '\n';
         std::cout << "Input: ";
         std::cin >> op;

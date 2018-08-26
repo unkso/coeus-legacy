@@ -1,10 +1,10 @@
 //
 // Created by Eric Dattore on 8/25/18.
 //
-#include "raptor.hpp"
+#include "coeus.hpp"
 #include "../headers/utilities.hpp"
 
-namespace Raptor {
+namespace Coeus {
     User::User() : username(""), repairs(0), orders_comp(0), bombsdefused(0), roundsplayed(0), heals(0),
                    flagcaptured(0),
                    gamemodescore(0), timeplayed(0),
@@ -31,7 +31,7 @@ namespace Raptor {
         std::cout
                 << "You will filter players by their rank. Initial studies have shown that the rank margin of 100 - 120 will contain the best recruits for our clan.";
         std::cout
-                << "The number of interactions is the number of times that the Raptor is going to go over a pack of 100 players in the database while making sure they meet certain criteria.";
+                << "The number of interactions is the number of times that the Coeus is going to go over a pack of 100 players in the database while making sure they meet certain criteria.";
         std::cout
                 << "The starting point is the position in the database where you think those players in the rank margin are located. A good example would be values between 300-500.";
         std::cout
@@ -409,7 +409,7 @@ namespace Raptor {
 
         for (int pack = 0; pack < n_packs; pack++) {
             json data = exporter(500, 500 * pack);
-            std::cout << "Sending Raptor Data Pack#" << pack << " to UNKSO Server" << '\n';
+            std::cout << "Sending Coeus Data Pack#" << pack << " to UNKSO Server" << '\n';
             auto r = cpr::Post(cpr::Url{"http://unkso.michaeljamesbondparsons.com/stats"},
                                cpr::Body{data.dump()},
                                cpr::Header{{"content-type",  "application/json"},
@@ -442,7 +442,7 @@ namespace Raptor {
             }
         }
         json data = exporter(remainder, 500 * n_packs);
-        std::cout << "Sending Raptor Data Remainder Pack to UNKSO Server" << '\n';
+        std::cout << "Sending Coeus Data Remainder Pack to UNKSO Server" << '\n';
         auto r = cpr::Post(cpr::Url{"http://unkso.michaeljamesbondparsons.com/stats"},
                            cpr::Body{data.dump()},
                            cpr::Header{{"content-type",  "application/json"},
@@ -478,7 +478,7 @@ namespace Raptor {
         std::cout << "Type in the database directory you're tracking your stats from: ";
         getline(std::cin, db_partition);
         std::cout << '\n';
-        std::string url = "http://unkso.michaeljamesbondparsons.com/stats/bf1/latest?events[0]=" + db_partition;
+        std::string url = "http://unkso.michaeljamesbondparsons.com/stats/bf1/latest";//?events[0]=" + db_partition;
         auto r = cpr::Get(cpr::Url{url}, cpr::Header{{"content-type",  "application/json"},
                                                      {"Authorization", "Bearer 3C2B19E2946893CBE1AA14A7023867DAFDA0D4F1EEA9D4FF9C54EB4D09074C2B"}});
         if (r.text != "{\"players\":[]}") {
@@ -533,7 +533,6 @@ namespace Raptor {
                   bombsdefused.size() << " | " << rbombsdefused.size() << '\n' <<
                   gamemodescore.size() << " | " << rgamemodescore.size() << '\n' <<
                   geographic_region.size() << " | " << rgeographic_region.size() << '\n';
-        system("Pause");
 
         for (int i = 0; i < usernames.size(); i++) {
             if (usernames[i] == "" || timeplayed[i] == -1 || revives[i] == -1 || repairs[i] == -1 ||
@@ -907,7 +906,7 @@ namespace Raptor {
 
         for (int pack = 0; pack < n_packs; pack++) {
             json data = exporter(500, 500 * pack);
-            std::cout << "Sending Raptor Data Pack#" << pack << " to UNKSO Server" << '\n';
+            std::cout << "Sending Coeus Data Pack#" << pack << " to UNKSO Server" << '\n';
             auto r = cpr::Post(cpr::Url{"http://unkso.michaeljamesbondparsons.com/stats"},
                                cpr::Body{data.dump()},
                                cpr::Header{{"content-type",  "application/json"},
@@ -943,7 +942,7 @@ namespace Raptor {
         }
 
         json data = exporter(remainder, 500 * n_packs);
-        std::cout << "Sending Raptor Data#" << n_packs + 1 << " to UNKSO Server" << '\n';
+        std::cout << "Sending Coeus Data#" << n_packs + 1 << " to UNKSO Server" << '\n';
         auto r = cpr::Post(cpr::Url{"http://unkso.michaeljamesbondparsons.com/stats"},
                            cpr::Body{data.dump()},
                            cpr::Header{{"content-type",  "application/json"},
@@ -1080,7 +1079,7 @@ namespace Raptor {
         bool flag = true;
         while (flag) {
             std::cout << "==========================================================================" << '\n';
-            std::cout << "Do you wish to create a Raptor List for players of which region?" << '\n';
+            std::cout << "Do you wish to create a Coeus List for players of which region?" << '\n';
             std::cout << "1 - North America" << '\n';
             std::cout << "2 - Europe" << '\n';
             std::cout << "3 - Asia, Oceania, Africa and South America" << '\n';
@@ -1091,7 +1090,7 @@ namespace Raptor {
             std::cin.get();
             switch (op) {
                 case 1: {
-                    std::cout << "You will export a Raptor List for North American Players" << '\n';
+                    std::cout << "You will export a Coeus List for North American Players" << '\n';
                     time_t now = time(0);
                     char time[100];
                     struct tm *timeinfo = localtime(&now);
@@ -1114,7 +1113,7 @@ namespace Raptor {
                     break;
                 }
                 case 2: {
-                    std::cout << "You will export a Raptor List for European Players" << '\n';
+                    std::cout << "You will export a Coeus List for European Players" << '\n';
                     time_t now = time(0);
                     char time[100];
                     struct tm *timeinfo = localtime(&now);
@@ -1137,7 +1136,7 @@ namespace Raptor {
                     break;
                 }
                 case 3: {
-                    std::cout << "You will export a Raptor List for AASAO Players" << '\n';
+                    std::cout << "You will export a Coeus List for AASAO Players" << '\n';
                     time_t now = time(0);
                     char time[100];
                     struct tm *timeinfo = localtime(&now);
@@ -1160,7 +1159,7 @@ namespace Raptor {
                     break;
                 }
                 case 4: {
-                    std::cout << "You will export a Raptor List for Unknown Players" << '\n';
+                    std::cout << "You will export a Coeus List for Unknown Players" << '\n';
                     time_t now = time(0);
                     char time[100];
                     struct tm *timeinfo = localtime(&now);

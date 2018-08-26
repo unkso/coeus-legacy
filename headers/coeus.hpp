@@ -7,7 +7,7 @@
 
 #include "headers.hpp"
 
-namespace Raptor {
+namespace Coeus {
     class User {
     public:
         std::string username;
