@@ -24,6 +24,7 @@
 #include <ctime>
 #include <numeric>
 #include <algorithm>
+#include <memory>
 
 #include "data_fetcher.hpp"
 

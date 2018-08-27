@@ -34,7 +34,7 @@ namespace Coeus {
 
     class Vision {
     protected:
-        DataFetcher *logdata;
+        std::unique_ptr<DataFetcher> logdata;
         std::vector<std::string> t_sourcecode; //transformed source code
         int maxrank;
         int minrank;
@@ -46,8 +46,6 @@ namespace Coeus {
         std::vector<std::string> users;
         std::vector<std::string> dbusernames;
     public:
-        ~Vision();
-
         Vision();
 
         std::vector<std::string> getusers();
@@ -63,7 +61,7 @@ namespace Coeus {
 
     class Engine {
     protected:
-        Vision *eye;
+        std::unique_ptr<Vision> eye;
         std::string db_partition;
         //Statistical Matrix
         std::vector<std::string> usernames;
@@ -129,8 +127,6 @@ namespace Coeus {
         std::vector<float> vptfo_index;
         std::vector<float> vactivity_index;
     public:
-        ~Engine();
-
         Engine(bool);
 
         //Engine
@@ -204,8 +200,6 @@ namespace Coeus {
         double GPTFO();
 
         double GACT();
-
-        int GReg();
 
         std::string GUSN();
     };

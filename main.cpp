@@ -3,7 +3,6 @@
 #include "headers.hpp"
 #include "utilities.hpp"
 #include "bf1.hpp"
-#include "bf4.hpp"
 #include "siege.hpp"
 #include "coeus.hpp"
 #include "interface.hpp"

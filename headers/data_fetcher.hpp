@@ -47,18 +47,6 @@ public:
         fout.close();
     }
 
-    void pre_processed_disk_exporter(std::string filename) {
-        std::string filepath = filename + ".txt";
-        int pos;
-        //
-        pos = sourcecode.find("Please activate javascript to see everything.");
-        sourcecode.erase(0, pos);
-        //
-        std::ofstream fout(filepath);
-        fout << sourcecode;
-        fout.close();
-    }
-
     friend std::ostream &operator<<(std::ostream &os, DataFetcher &obj) {
         std::cout << obj.sourcecode;
         return os;

@@ -16,8 +16,6 @@ namespace Coeus {
               gamemodescore(h), timeplayed(i),
               flagdefended(j), geographic_region(k), revives(l), squadscore(m), bombsplaced(n) {}
 
-    Vision::~Vision() { delete logdata; }
-
     Vision::Vision() : search_for_more(true), numbplrs(0) {
         int i, point, maxpoint;
         std::cout
@@ -78,7 +76,7 @@ namespace Coeus {
         } // finds db players
         while (search_for_more) {
             url = "https://battlefieldtracker.com/bf1/leaderboards/pc/Rank?page=" + std::to_string(point);
-            logdata = new DataFetcher(url);
+            logdata = std::make_unique<DataFetcher>(url);
             t_sourcecode = SourceCode2StringVector(logdata->GetSource());
             t_sourcecode_processor();
             t_sourcecode.clear();
@@ -165,8 +163,6 @@ namespace Coeus {
         return os;
     }
 
-    Engine::~Engine() { delete eye; }
-
     Engine::Engine(bool update) : dftx(nullptr) {
         bool status = true;
         if (update) {
@@ -187,7 +183,7 @@ namespace Coeus {
                 exit(0);
             }
         } else {
-            eye = new Vision();
+            eye = std::make_unique<Vision>();
             network_module(eye->getusers());
             parser_module(usernames);
             region_filter(usernames);
@@ -478,7 +474,7 @@ namespace Coeus {
         std::cout << "Type in the database directory you're tracking your stats from: ";
         getline(std::cin, db_partition);
         std::cout << '\n';
-        std::string url = "http://unkso.michaeljamesbondparsons.com/stats/bf1/latest";//?events[0]=" + db_partition;
+        std::string url = "http://unkso.michaeljamesbondparsons.com/stats/bf1/latest?events[0]=" + db_partition;
         auto r = cpr::Get(cpr::Url{url}, cpr::Header{{"content-type",  "application/json"},
                                                      {"Authorization", "Bearer 3C2B19E2946893CBE1AA14A7023867DAFDA0D4F1EEA9D4FF9C54EB4D09074C2B"}});
         if (r.text != "{\"players\":[]}") {
@@ -1055,8 +1051,6 @@ namespace Coeus {
 
     double Player::GACT() { return activity_ind; }
 
-    int Player::GReg() { return region; }
-
     std::string Player::GUSN() { return username; }
 
     Assembler::Assembler(bool update) : Synchronizer(update) {
@@ -1103,7 +1097,7 @@ namespace Coeus {
                             << "Username, Activity Index, Teamwork Index, PTFO Index, Region, Sent Friend Request, Accepted Invitation, Sent Message, Replied to Message, Applied to Clan"
                             << '\n';
                     for (auto &plr : raptorlist) {
-                        if (plr.region == 1 && plr.activity_ind > 20 && plr.tmwork_ind > 0 && plr.ptfo_ind > 0) {
+                        if (plr.region == 1) {
                             fout << plr.username << ',' << plr.activity_ind << ',' << plr.tmwork_ind << ','
                                  << plr.ptfo_ind << ',' << plr.region << '\n';
                         }
@@ -1126,7 +1120,7 @@ namespace Coeus {
                             << "Username, Activity Index, Teamwork Index, PTFO Index, Region, Sent Friend Request, Accepted Invitation, Sent Message, Replied to Message, Applied to Clan"
                             << '\n';
                     for (auto &plr : raptorlist) {
-                        if (plr.region == 2 && plr.activity_ind > 20 && plr.tmwork_ind > 0 && plr.ptfo_ind > 0) {
+                        if (plr.region == 2) {
                             fout << plr.username << ',' << plr.activity_ind << ',' << plr.tmwork_ind << ','
                                  << plr.ptfo_ind << ',' << plr.region << '\n';
                         }
@@ -1149,7 +1143,7 @@ namespace Coeus {
                             << "Username, Activity Index, Teamwork Index, PTFO Index, Region, Sent Friend Request, Accepted Invitation, Sent Message, Replied to Message, Applied to Clan"
                             << '\n';
                     for (auto &plr : raptorlist) {
-                        if (plr.region == 3 && plr.activity_ind > 20 && plr.tmwork_ind > 0 && plr.ptfo_ind > 0) {
+                        if (plr.region == 3) {
                             fout << plr.username << ',' << plr.activity_ind << ',' << plr.tmwork_ind << ','
                                  << plr.ptfo_ind << ',' << plr.region << '\n';
                         }
@@ -1172,7 +1166,7 @@ namespace Coeus {
                             << "Username, Activity Index, Teamwork Index, PTFO Index, Region, Sent Friend Request, Accepted Invitation, Sent Message, Replied to Message, Applied to Clan"
                             << '\n';
                     for (auto &plr : raptorlist) {
-                        if (plr.region == 0 && plr.activity_ind > 20 && plr.tmwork_ind > 0 && plr.ptfo_ind > 0) {
+                        if (plr.region == 0) {
                             fout << plr.username << ',' << plr.activity_ind << ',' << plr.tmwork_ind << ','
                                  << plr.ptfo_ind << ',' << plr.region << '\n';
                         }
